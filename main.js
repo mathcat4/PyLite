@@ -28,10 +28,12 @@ function _runEvent() {
 	_isError = false;
 	_error = "";
 
+	_modules = ["Pylite"];
+
 	_codeInp = _code.value();
 	_codeInpArr = _codeInp.split("\n")
 
-	_lineNum = 1;
+	_lineNum = 1;	
 
 	for (let _codeLine of _codeInpArr) {
 		if (!_isError) {
@@ -52,7 +54,7 @@ function _runEvent() {
 	if (_isError) {
 		_output.value(_error)
 	} else {
-		_output.value(_outputList.join("\n"));
+		_output.value(_outputList.join(""));
 	}
 }
 

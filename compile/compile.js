@@ -1,4 +1,11 @@
 let _modules = ["Pylite"];
+let _preModules = ["Pylite"]
+let _variables = {
+	π: 3.141592653589793,
+	ℇ: 2.718281828459045,
+	φ: 1.618033988749895,
+	_S2: 1.414213562373095
+};
 // let _modulesF = {
 // 	"Pylite": _PyliteComp,
 // }
@@ -36,9 +43,15 @@ function _compile(_args, _line) {
 		if (!_erout) {
 			_funcRest = _argsList;
 			_funcRest.splice(0, 1);
-			_retList = _PyliteComp(_funcRest, _line);
-			_erout = _retList[1];
 
+			switch(_module) {
+				case "Pylite":
+					_retList = _PyliteComp(_funcRest, _line);
+					break;
+			}
+
+
+			_erout = _retList[1];
 			_cOutput = _retList[0];
 		}
 
