@@ -1,5 +1,7 @@
 # PyLite
-A new Estoric Programming Language made by Maths
+A new Estoric Programming Language made by [Maths](https://codegolf.stackexchange.com/users/96037/math)
+
+UNDER DEVELOPMENT
 
 ## DESCRIPTION
 Description comming soon
