@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://pyth.herokuapp.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>PyLite Compiler/Executor</title>
+		<link rel="stylesheet" href="./data/bootstrap.min.css">
+		<link rel="stylesheet" href="./data/font-awesome.min.css">
+		<script src="libraries/p5.min.js"></script>
+		<script src="compile/compile.js"></script>
+
+		<script src="compile/Modules/Pylite.js"></script>
+
+  		<script src="main.js"></script>
+		<!-- <script src="./data/jquery.min.js.download"></script> -->
+		<!-- <script src=".data/bootstrap.min.js.download"></script> -->
+		<!-- <link rel="shortcut icon" href="https://pyth.herokuapp.com/favicon2.ico"> -->
+		<style type="text/css">
+			.bottom-row {
+				/*float: right;*/
+			}
+			#code {
+				margin-bottom: 25px;
+				margin-top: 15px;
+				margin-left: 25%;
+			}
+			#output {
+				/*margin-bottom: 0px;*/
+				margin-left: 50%;
+				width: 150%;
+			}
+			#input {
+				margin-top: 15px;
+				margin-left: 100px;
+			}
+			#run-button{
+				margin-left: 115%;
+			}
+			pre.scroll {
+				max-height: 20%;
+				overflow: auto;
+			}
+			#table-container {
+				overflow: auto;
+			}
+			.full {
+				width: 100%;
+			}
+			.Char {
+				width: 15%;
+			}
+			.Args {
+				width: 25%;
+			}
+			.Details {
+				width: 60%;
+				overflow: auto;
+			}
+
+			#code, #input, #output, #test-suite-input {
+				font-family: monospace;
+			}
+
+			#heading {
+				margin-left: 35%;
+			}
+
+            #test-suite {
+                display: none;
+            }
+
+            #switcher {
+                color: gray;
+            }
+
+            #middle-row {
+                padding-bottom: 10px;
+            }
+
+			#loading {
+				margin-left: 15px;
+				font-size: 24pt;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2 id="heading"><a href="#github">PyLite</a> Compiler/Executor</h2>
+			<br>
+			<div class="row">
+				<div class="col-md-5">
+					<i class="fa fa-spinner fa-spin" id="loading" style="display: none;"></i>
+					<textarea id="code" placeholder="Code" class="form-control" rows="7"></textarea>
+
+					<textarea id="output" placeholder="Output" class="form-control" rows="7"></textarea>
+
+					<br>
+					<div class="bottom-row">
+						<!-- Debug on?: <input id="debug" type="checkbox"> -->
+					</div><br><br>
+					<div class="bottom-row">
+						<!-- <button class="btn btn-primary" onclick="permalink()">Permalink</button> -->
+						<button class="btn btn-primary" id ="run-button">Run (Ctrl-Enter)</button>	
+					</div>
+					<br>
+					<p>Code length: <span id="length">0</span></p>
+					<p>Compiler last updated: 07 April 2021</p>
+				</div>
+				<div class="col-md-5">
+					<div id="inputs">
+				        <textarea id="input" placeholder="Input" class="form-control" rows="7" style="display: block;"></textarea>
+                        <div id="test-suite" style="display: none;">
+                            <textarea id="test-suite-input" placeholder="Test Cases" class="form-control" rows="7"></textarea>
+                        </div>
+                    </div>
+				</div>
+
+
+</body></html>
