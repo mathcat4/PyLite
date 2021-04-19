@@ -1,5 +1,5 @@
 # PyLite
-A Programming Language made by [Maths](https://codegolf.stackexchange.com/users/96037/math)
+A Programming Language
 
 UNDER DEVELOPMENT
 
